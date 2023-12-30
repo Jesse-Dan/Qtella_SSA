@@ -1,0 +1,18 @@
+ // String insertQuery = qb.insert().into("employees").values("(101, 'John Doe',
+        // 30, 50000)").build();
+        // System.out.println("INSERT query: " + insertQuery);
+
+        // String updateQuery = qb.update("employees").set("salary = 55000").where("id =
+        // 101").build();
+        // System.out.println("UPDATE query: " + updateQuery);
+
+        // String deleteQuery = qb.delete().fromTable("employees").where("id =
+        // 101").build();
+        // System.out.println("DELETE query: " + deleteQuery);
+
+        // String complexQuery = qb.select().all().from().table("orders")
+        // .where("status = 'pending'")
+        // .orderBy("order_date DESC")
+        // .groupBy("customer_id")
+        // .build();
+        // System.out.println("Complex SELECT query: " + complexQuery);

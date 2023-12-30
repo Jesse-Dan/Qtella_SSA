@@ -1,14 +1,14 @@
 package src;
 
-import java.sql.SQLException;
-import java.util.Date;
-
-import src.Models.User;
 import src.Services.QueryBuilderService;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        // private static final String URL = "jdbc:mysql://localhost:3306/qtella_api";
+        // private static final String USERNAME = "root";
+        // private static final String PASSWORD = "";
 
         // User user1 = new User(1, "Jesse Dan", "jessedan160", "jessedan@qtella.com", "1234567890", "123 Main St", new Date(),
         //         new Date(), new Date());
@@ -20,7 +20,6 @@ public class Main {
         //         new Date(), new Date(), new Date());
         // User user5 = new User(5, "Michael Davis", "mike_d", "michael@example.com", "9998887777", "567 Cedar St",
         //         new Date(), new Date(), new Date());
-
         //     user1.saveUser();
        
  new QueryBuilderService()
