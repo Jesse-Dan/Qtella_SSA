@@ -113,6 +113,10 @@ public class QueryBuilderService {
         return this;
     }
 
+    /*
+    when using the create table command remember to us the use the 
+    close comand at the end before the build or the run quries
+    */
     public QueryBuilderService createTable(String tableName) {
         sqlQuery.append("CREATE TABLE IF NOT EXISTS ").append(tableName).append(" (");
         return this;
