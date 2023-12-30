@@ -1,6 +1,8 @@
 package src.Interfaces;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import src.Interfaces.UserInterface;
 import src.Models.User;
@@ -8,13 +10,13 @@ import src.Models.User;
 
 public interface UserInterface {
 
-    public void getUser();
+    public void getUser(int id);
 
-    public void saveUser();
+    public HashMap<String,String> saveUser() throws SQLException;
 
     public void editUserr();
 
-    public void deleteUser();
+    public void deleteUser(int id);
 
 
     public ArrayList<User> getAllUsers();

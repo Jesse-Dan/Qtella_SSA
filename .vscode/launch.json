@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DateService",
+            "request": "launch",
+            "mainClass": "src.Services.DateService",
+            "projectName": "Qtella_SSA_259432a"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

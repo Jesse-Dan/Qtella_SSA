@@ -7,15 +7,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DbServices {
+
+
+    
     private static Connection connection = null;
 
     private static final String URL = "jdbc:mysql://localhost:3306/qtella_api";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
 
-    // private static final String DB_URL = System.getenv("DB_URL");
-    // private static final String DB_USERNAME = System.getenv("DB_USERNAME");
-    // private static final String DB_PASSWORD = System.getenv("DB_PASSWORD");
+    // private static final String URL = System.getenv("DB_URL");
+    // private static final String USERNAME = System.getenv("DB_USERNAME");
+    // private static final String PASSWORD = System.getenv("DB_PASSWORD");
 
     public static Connection getConnection() {
         if (connection == null) {
@@ -50,5 +53,18 @@ public class DbServices {
         }
 
         return resultSet;
+    }
+
+ public static int runExecuteUpdate(String query) {
+        Connection connection = getConnection();
+        int affectedRows = 0;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            affectedRows = preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return affectedRows;
     }
 }
